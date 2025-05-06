@@ -1,5 +1,3 @@
-![Screenshot 2025-04-21 182419](https://github.com/user-attachments/assets/a40bf2bc-81d9-4414-8b0e-778b015f84a2)![Screenshot 2025-04-10 110134](https://github.com/user-attachments/assets/7ae28cb8-c9f3-40a6-bcc2-e58f09e5db01)![Screenshot 2025-04-10 105657](https://github.com/user-attachments/assets/d498496e-8cda-4d20-8e9b-b24b7749b114)![Screenshot 2025-03-25 140810](https://github.com/user-attachments/assets/f35b5056-2079-4999-9ddf-4e80ebb70221)![Screenshot 2025-03-25 140738](https://github.com/user-attachments/assets/0ca1f44c-652d-4681-8791-6d7028ac4409)# EXNO-6-DS-DATA VISUALIZATION USING SEABORN LIBRARY
-
 # Aim:
   To Perform Data Visualization using seaborn python library for the given datas.
 
@@ -104,6 +102,74 @@ sns.barplot(x='Embarked', y='Fare', data=tit, palette='rainbow', hue='Pclass')
 plt.title("Fare of Passenger by Embarked Town, Divided by Class")
 ```
 ![Screenshot 2025-05-06 143928](https://github.com/user-attachments/assets/a0aee7bd-c7b6-438a-a58d-7befb1dd5c3b)
+```
+plt.figure(figsize=(8,5))
+sns.barplot(x='Embarked', y='Fare', data=tit, palette='rainbow', hue='Pclass')
+plt.title("Fare of Passenger by Embarked Town, Divided by Class")
+```
+![Screenshot 2025-05-06 143928](https://github.com/user-attachments/assets/41e19896-9411-4268-a597-3d3692e9b312)
+```
+tips=sns.load_dataset('tips')
+sns.scatterplot(x='total_bill', y='tip', hue='sex', data=tips)
+plt.xlabel('Total Bill')
+plt.ylabel("Tip Amount")
+plt.title('Scatter Plot of Total Bill vs. Tip Amount')
+```
+![Screenshot 2025-05-06 143935](https://github.com/user-attachments/assets/719658e6-49ff-4da9-a2b3-ae792b46c03d)
+```
+num_var = np.random.randn(1000)
+num_var=pd.Series(num_var, name = "Numerical variable")
+num_var
+```
+![Screenshot 2025-05-06 143940](https://github.com/user-attachments/assets/789cb708-960c-43fe-b2bd-1ef69175bf85)
+```
+sns.histplot(data = num_var, kde = True)
+```
+![Screenshot 2025-05-06 143947](https://github.com/user-attachments/assets/152230e1-7404-4b8d-9f75-960f8dd2e28f)
+```
+df=pd.read_csv("/content/titanic_dataset.csv")
+sns.histplot(data=df,x="Pclass", hue="Survived", kde=True)
+```
+![Screenshot 2025-05-06 143953](https://github.com/user-attachments/assets/e83e2614-c08f-4203-b021-cb5ec620ed49)
+```
+tips=sns.load_dataset('tips')
+sns.boxplot(x=tips['day'], y=tips ['total_bill'], hue=tips['sex'])
+```
+![Screenshot 2025-05-06 143958](https://github.com/user-attachments/assets/de311387-8ae9-4443-a1b4-2fcb30a58201)
+```
+sns.boxplot(x="day", y="total_bill", hue="smoker", data=tips, linewidth=2, width=0.6, boxprops={"facecolor": "lightblue", "edgecolor": "darkblue"},
+whiskerprops={"color": "black", "linestyle": "--", "linewidth": 1.5}, capprops={"color": "black", "linestyle": "--", "linewidth": 1.5})
+```
+![Screenshot 2025-05-06 144011](https://github.com/user-attachments/assets/45c76d22-0ffb-4b1d-b481-8b80f93e2abe)
+```
+sns.violinplot(x="day", y="total_bill", hue="smoker", data=tips, linewidth=2, width=0.6, palette="Set3", inner="quartile")
+plt.xlabel("Day of the Week")
+plt.ylabel("Total Bill")
+plt.title("Violin Plot of Total Bill by Day and Smoker Status")
+```
+![Screenshot 2025-05-06 144018](https://github.com/user-attachments/assets/ce33277b-195a-4edd-9081-a0df42ed8d84)
+```
+mart=pd.read_csv("/content/titanic_dataset.csv")
+mart
+```
+![Screenshot 2025-05-06 144032](https://github.com/user-attachments/assets/62b33ce8-6b24-4486-8ac9-f3e9cd71b7e6)
+```
+mart=mart[['PassengerId', 'Survived', 'Age', 'Name', 'Ticket', 'Embarked']]
+mart.head(10)
+```
+![Screenshot 2025-05-06 144038](https://github.com/user-attachments/assets/1a7643a0-cfc0-4319-b3f9-8d6f56438964)
+```
+sns.kdeplot(data=mart,x='PassengerId')
+```
+![Screenshot 2025-05-06 144046](https://github.com/user-attachments/assets/705cfb2b-ea0c-4ffd-845c-237996fd4b45)
+```
+sns.kdeplot(data=mart,x='Age')
+```
+
+```
+sns.kdeplot(data=mart)
+```
+
 
 
 
