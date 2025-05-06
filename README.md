@@ -162,13 +162,8 @@ mart.head(10)
 sns.kdeplot(data=mart,x='PassengerId')
 ```
 ![Screenshot 2025-05-06 144046](https://github.com/user-attachments/assets/705cfb2b-ea0c-4ffd-845c-237996fd4b45)
-```
-sns.kdeplot(data=mart,x='Age')
-```
 
-```
-sns.kdeplot(data=mart)
-```
+
 
 
 
