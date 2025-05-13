@@ -162,7 +162,30 @@ mart.head(10)
 sns.kdeplot(data=mart,x='PassengerId')
 ```
 ![Screenshot 2025-05-06 144046](https://github.com/user-attachments/assets/705cfb2b-ea0c-4ffd-845c-237996fd4b45)
-
+```sns.kdeplot(data=mart,x='Age')
+```
+![Screenshot 2025-05-06 144052](https://github.com/user-attachments/assets/e6cfc0e6-385a-4ca4-9a08-0e876bca5fc3)
+```
+sns.kdeplot(data=mart)
+```
+![Screenshot 2025-05-06 144058](https://github.com/user-attachments/assets/b68e5018-5e3f-40f8-ae2a-2943843599eb)
+```
+sns.kdeplot(data=mart,x='PassengerId',hue='Survived',multiple='stack')
+```
+![Screenshot 2025-05-06 144104](https://github.com/user-attachments/assets/177ce144-e804-43b7-b671-2750c110c67b)
+```
+sns.kdeplot(data=mart,x='PassengerId',y='Survived')
+```
+![Screenshot 2025-05-06 144109](https://github.com/user-attachments/assets/0082c3a6-34cf-4696-8447-eb7f02391054)
+```
+data = np.random.randint(low = 1, high = 100, size = (10,10))
+hm=sns.heatmap(data=data,annot=True)
+```
+![Screenshot 2025-05-06 144114](https://github.com/user-attachments/assets/f5e4a9c2-18d5-4729-bb49-bf31d2cee92b)
+```
+hm=sns.heatmap(data=data)
+```
+![Screenshot 2025-05-06 144119](https://github.com/user-attachments/assets/3df606e7-8659-4b03-8b2b-74d801f499ff)
 
 
 
